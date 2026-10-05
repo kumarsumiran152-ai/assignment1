@@ -36,6 +36,18 @@ function Hero() {
         "-=0.4"
       );
 
+      // Rotate oval while scrolling
+      gsap.to(objectRef.current, {
+        rotation: 360,
+
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
       // Fade "Keep Scrolling" text
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
