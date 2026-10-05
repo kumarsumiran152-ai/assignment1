@@ -14,10 +14,7 @@ function Hero() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
 
-      
-      // 1. INITIAL PAGE LOAD ANIMATION
-  
-
+      // Page load animation
       const timeline = gsap.timeline();
 
       timeline.from(titleRef.current, {
@@ -39,11 +36,7 @@ function Hero() {
         "-=0.4"
       );
 
-
-      
-      // 2. SCROLL ANIMATION
-  
-
+      // Scroll animation
       gsap.to(objectRef.current, {
         x: "10vw",
         y: "5vh",
@@ -58,11 +51,7 @@ function Hero() {
         },
       });
 
-
-      
-      // 3. KEEP SCROLLING TEXT
-      
-  /*
+      // Fade scroll text
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
 
@@ -72,7 +61,7 @@ function Hero() {
           end: "60% top",
           scrub: true,
         },
-      }); */
+      });
 
     }, sectionRef);
 
@@ -85,7 +74,7 @@ function Hero() {
       className="min-h-[180vh] bg-[#f4f1ea] px-6 py-8 md:px-10"
     >
 
-      {/* TOP BAR */}
+      {/* Top bar */}
       <div className="flex justify-between items-start">
         <p className="text-xs md:text-sm tracking-[0.3em]">
           TZFIZZ
@@ -96,8 +85,7 @@ function Hero() {
         </p>
       </div>
 
-
-      {/* HERO TITLE */}
+      {/* Hero title */}
       <div className="mt-28 md:mt-32 overflow-hidden">
         <h1
           ref={titleRef}
@@ -107,23 +95,24 @@ function Hero() {
         </h1>
       </div>
 
-
-      {/* ANIMATED OBJECT */}
-      <div className="relative h-[45vh] flex items-center justify-center">
-
+      {/* Animated object */}
+      <div className="relative h-[300px] flex items-center justify-center">
         <div
           ref={objectRef}
-          className="relative z-10 w-48 h-24 md:w-56 md:h-28 rounded-[50%] bg-black flex items-center justify-center"
+          className="relative z-50 w-48 h-24 md:w-56 md:h-28 rounded-full flex items-center justify-center"
+          style={{
+            backgroundColor: "#000000",
+            minWidth: "192px",
+            minHeight: "96px",
+          }}
         >
           <span className="text-white text-sm md:text-lg tracking-[0.25em]">
             TZFIZZ
           </span>
         </div>
-
       </div>
 
-
-      {/* STATISTICS */}
+      {/* Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 max-w-4xl">
 
         <div ref={(el) => (statsRef.current[0] = el)}>
@@ -136,7 +125,6 @@ function Hero() {
           </p>
         </div>
 
-
         <div ref={(el) => (statsRef.current[1] = el)}>
           <h2 className="text-4xl md:text-5xl font-bold">
             48K+
@@ -146,7 +134,6 @@ function Hero() {
             Projects
           </p>
         </div>
-
 
         <div ref={(el) => (statsRef.current[2] = el)}>
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -160,8 +147,7 @@ function Hero() {
 
       </div>
 
-
-      {/* BOTTOM TEXT */}
+      {/* Bottom text */}
       <div
         ref={scrollTextRef}
         className="mt-40 flex justify-center"
