@@ -14,9 +14,9 @@ function Hero() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
 
-      // -----------------------------
+      
       // 1. INITIAL PAGE LOAD ANIMATION
-      // -----------------------------
+  
 
       const timeline = gsap.timeline();
 
@@ -40,13 +40,13 @@ function Hero() {
       );
 
 
-      // -----------------------------
+      
       // 2. SCROLL ANIMATION
-      // -----------------------------
+  
 
       gsap.to(objectRef.current, {
-        x: 220,
-        y: 150,
+        x: "20vw",
+        y: "10vh",
         rotation: 360,
         scale: 1.15,
 
@@ -59,9 +59,9 @@ function Hero() {
       });
 
 
-      // -----------------------------
+      
       // 3. KEEP SCROLLING TEXT
-      // -----------------------------
+      
 
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
