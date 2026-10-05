@@ -45,10 +45,10 @@ function Hero() {
   
 
       gsap.to(objectRef.current, {
-        x: "20vw",
-        y: "10vh",
+        x: "10vw",
+        y: "5vh",
         rotation: 360,
-        scale: 1.15,
+        scale: 1.1,
 
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -113,7 +113,7 @@ function Hero() {
 
         <div
           ref={objectRef}
-          className="w-48 h-24 md:w-56 md:h-28 rounded-[50%] bg-black flex items-center justify-center"
+          className="relative z-10 w-48 h-24 md:w-56 md:h-28 rounded-[50%] bg-black flex items-center justify-center"
         >
           <span className="text-white text-sm md:text-lg tracking-[0.25em]">
             TZFIZZ
