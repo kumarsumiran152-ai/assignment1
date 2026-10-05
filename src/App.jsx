@@ -37,20 +37,20 @@ function Hero() {
       );
 
       // Scroll animation
-      
-gsap.to(objectRef.current, {
-  x: "10vw",
-  y: "20vh",
-  rotation: 720,
-  scale: 1.15,
+      gsap.to(objectRef.current, {
+        x: "10vw",
+        y: "20vh",
+        rotation: 720,
+        scale: 1.15,
 
-  scrollTrigger: {
-    trigger: objectRef.current,
-    start: "top 80%",
-    end: "bottom 20%",
-    scrub: true,
-  },
-}); 
+        scrollTrigger: {
+          trigger: objectRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      });
+
       // Fade scroll text
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
@@ -97,6 +97,7 @@ gsap.to(objectRef.current, {
 
       {/* Animated object */}
       <div className="relative h-[300px] w-full flex items-center justify-center">
+
         <div
           ref={objectRef}
           style={{
@@ -126,6 +127,7 @@ gsap.to(objectRef.current, {
             TZFIZZ
           </span>
         </div>
+
       </div>
 
       {/* Statistics */}
