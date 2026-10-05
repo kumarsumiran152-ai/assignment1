@@ -99,11 +99,19 @@ function Hero() {
       <div className="relative h-[300px] flex items-center justify-center">
         <div
           ref={objectRef}
-          className="relative z-50 w-48 h-24 md:w-56 md:h-28 rounded-full flex items-center justify-center"
           style={{
-            backgroundColor: "#000000",
+            width: "192px",
+            height: "96px",
             minWidth: "192px",
+            maxWidth: "192px",
             minHeight: "96px",
+            maxHeight: "96px",
+            backgroundColor: "black",
+            borderRadius: "50%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0,
           }}
         >
           <span className="text-white text-sm md:text-lg tracking-[0.25em]">
