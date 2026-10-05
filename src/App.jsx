@@ -62,7 +62,7 @@ function Hero() {
       
       // 3. KEEP SCROLLING TEXT
       
-
+  /*
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
 
@@ -72,7 +72,7 @@ function Hero() {
           end: "60% top",
           scrub: true,
         },
-      });
+      }); */
 
     }, sectionRef);
 
