@@ -13,7 +13,6 @@ function Hero() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-
       // Page load animation
       const timeline = gsap.timeline();
 
@@ -36,19 +35,34 @@ function Hero() {
         "-=0.4"
       );
 
-      // Rotate oval while scrolling
-      gsap.to(objectRef.current, {
-        rotation: 360,
+      // Different scroll settings for desktop and mobile
+      const mm = gsap.matchMedia();
 
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
+      mm.add(
+        {
+          desktop: "(min-width: 768px)",
+          mobile: "(max-width: 767px)",
         },
-      });
+        (context) => {
+          const { desktop, mobile } = context.conditions;
 
-      // Fade "Keep Scrolling" text
+          gsap.to(objectRef.current, {
+            rotation: 360,
+
+            scrollTrigger: {
+              trigger: sectionRef.current,
+
+              start: desktop ? "top top" : "top 80%",
+              end: desktop ? "bottom top" : "bottom 20%",
+
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+        }
+      );
+
+      // Fade "Keep Scrolling"
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
 
@@ -57,9 +71,9 @@ function Hero() {
           start: "30% top",
           end: "60% top",
           scrub: true,
+          invalidateOnRefresh: true,
         },
       });
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -70,7 +84,6 @@ function Hero() {
       ref={sectionRef}
       className="min-h-[180vh] w-full overflow-x-hidden bg-[#f4f1ea] px-6 py-8 md:px-10"
     >
-
       {/* Top bar */}
       <div className="flex w-full justify-between items-start">
         <p className="text-xs md:text-sm tracking-[0.3em]">
@@ -94,7 +107,6 @@ function Hero() {
 
       {/* Black oval */}
       <div className="relative h-[300px] w-full flex items-center justify-center">
-
         <div
           ref={objectRef}
           style={{
@@ -125,12 +137,10 @@ function Hero() {
             TZFIZZ
           </span>
         </div>
-
       </div>
 
       {/* Statistics */}
       <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
-
         <div ref={(el) => (statsRef.current[0] = el)}>
           <h2 className="text-4xl md:text-5xl font-bold">
             92%
@@ -160,7 +170,6 @@ function Hero() {
             Satisfaction
           </p>
         </div>
-
       </div>
 
       {/* Bottom text */}
@@ -172,7 +181,6 @@ function Hero() {
           Keep Scrolling
         </p>
       </div>
-
     </section>
   );
 }
