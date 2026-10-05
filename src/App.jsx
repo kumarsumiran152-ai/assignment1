@@ -37,20 +37,20 @@ function Hero() {
       );
 
       // Scroll animation
-      gsap.to(objectRef.current, {
-        x: "10vw",
-        y: "5vh",
-        rotation: 360,
-        scale: 1.1,
+      
+gsap.to(objectRef.current, {
+  x: "10vw",
+  y: "20vh",
+  rotation: 720,
+  scale: 1.15,
 
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
-
+  scrollTrigger: {
+    trigger: objectRef.current,
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+  },
+}); 
       // Fade scroll text
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
