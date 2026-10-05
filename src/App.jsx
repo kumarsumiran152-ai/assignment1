@@ -36,22 +36,7 @@ function Hero() {
         "-=0.4"
       );
 
-      // Scroll animation
-      gsap.to(objectRef.current, {
-        x: "10vw",
-        y: "20vh",
-        rotation: 720,
-        scale: 1.15,
-
-        scrollTrigger: {
-          trigger: objectRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          scrub: true,
-        },
-      });
-
-      // Fade scroll text
+      // Fade "Keep Scrolling" text
       gsap.to(scrollTextRef.current, {
         opacity: 0.3,
 
@@ -71,7 +56,7 @@ function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-[180vh] w-full overflow-hidden bg-[#f4f1ea] px-6 py-8 md:px-10"
+      className="min-h-[180vh] w-full overflow-x-hidden bg-[#f4f1ea] px-6 py-8 md:px-10"
     >
 
       {/* Top bar */}
@@ -95,7 +80,7 @@ function Hero() {
         </h1>
       </div>
 
-      {/* Animated object */}
+      {/* Black oval */}
       <div className="relative h-[300px] w-full flex items-center justify-center">
 
         <div
@@ -113,6 +98,7 @@ function Hero() {
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
+            transform: "rotate(0deg)",
           }}
         >
           <span
