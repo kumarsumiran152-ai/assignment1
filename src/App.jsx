@@ -71,11 +71,11 @@ function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-[180vh] bg-[#f4f1ea] px-6 py-8 md:px-10"
+      className="min-h-[180vh] w-full overflow-hidden bg-[#f4f1ea] px-6 py-8 md:px-10"
     >
 
       {/* Top bar */}
-      <div className="flex justify-between items-start">
+      <div className="flex w-full justify-between items-start">
         <p className="text-xs md:text-sm tracking-[0.3em]">
           TZFIZZ
         </p>
@@ -86,17 +86,17 @@ function Hero() {
       </div>
 
       {/* Hero title */}
-      <div className="mt-28 md:mt-32 overflow-hidden">
+      <div className="mt-28 md:mt-32 w-full text-center overflow-hidden">
         <h1
           ref={titleRef}
-          className="text-[16vw] md:text-[12vw] leading-[0.85] font-bold tracking-[0.08em]"
+          className="whitespace-nowrap text-[13vw] md:text-[12vw] leading-[0.85] font-bold tracking-[0.04em]"
         >
           WELCOME
         </h1>
       </div>
 
       {/* Animated object */}
-      <div className="relative h-[300px] flex items-center justify-center">
+      <div className="relative h-[300px] w-full flex items-center justify-center">
         <div
           ref={objectRef}
           style={{
@@ -106,7 +106,7 @@ function Hero() {
             maxWidth: "192px",
             minHeight: "96px",
             maxHeight: "96px",
-            backgroundColor: "black",
+            backgroundColor: "#000000",
             borderRadius: "50%",
             display: "flex",
             alignItems: "center",
@@ -114,14 +114,22 @@ function Hero() {
             flexShrink: 0,
           }}
         >
-          <span className="text-white text-sm md:text-lg tracking-[0.25em]">
+          <span
+            style={{
+              color: "#ffffff",
+              display: "block",
+              whiteSpace: "nowrap",
+              fontSize: "14px",
+              letterSpacing: "0.25em",
+            }}
+          >
             TZFIZZ
           </span>
         </div>
       </div>
 
       {/* Statistics */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 max-w-4xl">
+      <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
 
         <div ref={(el) => (statsRef.current[0] = el)}>
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -158,7 +166,7 @@ function Hero() {
       {/* Bottom text */}
       <div
         ref={scrollTextRef}
-        className="mt-40 flex justify-center"
+        className="mt-40 flex w-full justify-center"
       >
         <p className="text-xs tracking-[0.3em] uppercase">
           Keep Scrolling
