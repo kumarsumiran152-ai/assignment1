@@ -35,7 +35,13 @@ function Hero() {
         "-=0.4"
       );
 
-      // Different scroll settings for desktop and mobile
+      // Make sure the oval starts completely straight
+      gsap.set(objectRef.current, {
+        rotation: 0,
+        force3D: false,
+      });
+
+      // Rotate oval while scrolling
       const mm = gsap.matchMedia();
 
       mm.add(
@@ -48,13 +54,11 @@ function Hero() {
 
           gsap.to(objectRef.current, {
             rotation: 360,
-
+            force3D: false,
             scrollTrigger: {
               trigger: sectionRef.current,
-
               start: desktop ? "top top" : "top 80%",
               end: desktop ? "bottom top" : "bottom 20%",
-
               scrub: 1,
               invalidateOnRefresh: true,
             },
@@ -122,7 +126,6 @@ function Hero() {
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
-            transform: "rotate(0deg)",
           }}
         >
           <span
