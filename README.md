@@ -1,16 +1,79 @@
-# React + Vite
+# Assignment 1 - Scroll Animation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React website built using React, Tailwind CSS and GSAP.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- Tailwind CSS
+- GSAP
+- ScrollTrigger
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive layout
+- GSAP page-load animations
+- Scroll-based oval animation
+- Responsive statistics section
+- Deployed using Vercel
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[Live Website](# Assignment 1 - Scroll Animation Website
+
+A responsive React website built using React, Tailwind CSS and GSAP.
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- GSAP
+- ScrollTrigger
+
+## Features
+
+- Responsive layout
+- GSAP page-load animations
+- Scroll-based oval animation
+- Responsive statistics section
+- Deployed using Vercel
+
+## Live Demo
+
+[Live Website](# Assignment 1 - Scroll Animation Website
+
+A responsive React website built using React, Tailwind CSS and GSAP.
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- GSAP
+- ScrollTrigger
+
+## Features
+
+- Responsive layout
+- GSAP page-load animations
+- Scroll-based oval animation
+- Responsive statistics section
+- Deployed using Vercel
+
+## Live Demo
+
+[Live Website](https://assignment1-techmain.vercel.app/)
+
+## GitHub
+
+https://github.com/kumarsumiran152-ai/assignment1)
+
+## GitHub
+
+https://github.com/kumarsumiran152-ai/assignment1)
+
+## GitHub
+
+https://github.com/kumarsumiran152-ai/assignment1
