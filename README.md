@@ -70,10 +70,4 @@ A responsive React website built using React, Tailwind CSS and GSAP.
 
 https://github.com/kumarsumiran152-ai/assignment1)
 
-## GitHub
 
-https://github.com/kumarsumiran152-ai/assignment1)
-
-## GitHub
-
-https://github.com/kumarsumiran152-ai/assignment1
